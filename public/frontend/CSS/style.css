@@ -1,0 +1,185 @@
+body {
+    margin: 0px;
+}
+
+.ToTopBtn {
+    background-color: beige;
+    font-size: 35px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 20px; /* Adjust the distance from the bottom as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.ToTopBtn:hover {
+    background-color: beige;
+    box-shadow: 0px 0px 5px 0px;
+    transition: 0.2s;
+}
+
+.navbarDiv {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 1000;
+    background: linear-gradient(90deg, #dec2ffda, #ffdcf293, #e4fff6e0);
+    box-shadow: 3px 3px 15px 1px;
+    backdrop-filter: blur(10px);
+}
+
+.home {
+    font-family: "WindSong", cursive;
+    font-weight: bold;
+    font-size: 45px;
+    text-decoration: none;
+    color: black;
+}
+
+.containerDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 4rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: "Electrolize", sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transform: scaleX(0); /* Initial state: no underline */
+    transition: transform 0.2s ease; /* Transition for underline effect */
+}
+
+.menu a:hover::after {
+    transform: scaleX(1); /* Underline on hover */
+}
+
+.toggle-menu {
+    background: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .containerDiv {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 2.5rem;
+    }
+    .home {
+        font-size: 3vw;
+    }
+
+    .logo-brand {
+        flex-grow: 1; /* Allow the logo-brand section to take up remaining space */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .containerDiv {
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 2.5rem;
+    }
+    .home {
+        font-size: 6vw;
+        margin-left: 0.5rem;
+    }
+
+    .logo-brand {
+        flex-grow: 1; /* Allow the logo-brand section to take up remaining space */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.521);
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .open {
+        display: block;
+        animation: slideLeft 0.3s;
+    }
+
+    .toggle-menu {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        border: none;
+    }
+
+    .slideRight {
+        animation: slideLeft 0.3s reverse;
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes slideRight {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(100%);
+        }
+    }
+}

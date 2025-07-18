@@ -1,0 +1,46 @@
+.popup{
+    box-shadow: 3px 3px 15px 1px;
+    border-radius: 10px;
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.popup table,td,tr{
+    text-align: center;
+    border: none;
+}
+.cancelpfp{
+    margin: 10px;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    transition: 0.1s;
+}
+.cancelpfp:hover{
+    background-color: red;
+    border: 2px solid red;
+    color: white;
+}
+.cancelpfp:active{
+    background-color: rgb(104, 0, 0);
+}
+.subpfp{
+    margin: 10px;
+    background-color: white;
+    border: 2px solid green;
+    border-radius: 5px;
+    color: green;
+    transition: 0.1s;
+}
+.subpfp:hover{
+    background-color: green;
+    border: 2px solid green;
+    color: white;
+}
+.subpfp:active{
+    background-color: rgb(0, 77, 0);
+}
+.inppfp{
+    margin-left: 5rem;
+    margin-top: 0.5rem;
+}

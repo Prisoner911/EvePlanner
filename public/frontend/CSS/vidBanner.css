@@ -1,0 +1,44 @@
+.vidDiv {
+    position: relative;
+    width: 100%;
+    height: calc(
+        100vh - 0px
+    ); /* Adjust the height based on your banner's height */
+}
+
+.vid {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.backgroundVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Adjust z-index if necessary */
+}
+
+@media only screen and (max-width: 1024px) {
+    .vidDiv {
+        margin-top: 4rem;
+        height: calc(35vh - 0px); /* Adjust the height for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .vidDiv {
+        margin-top: 0rem;
+        height: calc(35vh - 0px);
+    }
+}

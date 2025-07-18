@@ -1,0 +1,16 @@
+.thumbnail::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.thumbnail::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the track */
+}
+
+.thumbnail::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.thumbnail::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color of the scrollbar on hover */
+}

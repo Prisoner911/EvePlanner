@@ -1,0 +1,51 @@
+.carouseldiv {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.carouselBanner {
+  height: 35rem;
+  padding: 0.5rem;
+  border-radius: 10%;
+}
+
+.venueCarouseldiv {
+  margin-top: 2rem;
+}
+
+.carouselVenue {
+  height: 30rem;
+}
+
+.carousel-control-next {
+  background-color: black;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .carouselBanner {
+    height: 25rem;
+  }
+
+  .venueImg {
+    height: 500px;
+  }
+
+  .carouselVenue {
+    height: 20rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .carouselBanner {
+    height: 20rem;
+  }
+
+  .venueImg {
+    height: 240px;
+  }
+
+  .carouselVenue {
+    height: 15rem;
+  }
+}

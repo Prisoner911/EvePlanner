@@ -1,0 +1,118 @@
+/* Common styles for all screen sizes */
+.banner_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 0rem;
+  transition: 0.3s;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(90deg, rgb(227, 255, 215), rgb(204, 211, 255));
+  box-shadow: 0px 0px 5000px 150px rgb(255, 205, 238) inset;
+}
+
+.backgroundZoomed {
+  background: linear-gradient(
+    90deg,
+    #e4fff6 20%,
+    #bd95ee 100%,
+    #cdd3ff 80%,
+    #ffdcf1 100%
+  );
+  transition: 0.3s;
+  box-shadow: 0px 0px 50px 15px rgba(255, 129, 213, 0.616) inset,
+    15px 0px 10px 0px rgb(0, 0, 0);
+}
+
+.banner_logo.zoomed,
+.bannerNamePic.zoomed,
+.visionDiv.zoomed {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.banner_logo {
+  width: 15rem;
+  margin-top: 0rem;
+  transition: 0.5s;
+}
+
+.innerBanner {
+  width: 50%;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.innerBanner.poppedUp {
+  transform: translate3d(0, -20px, 0);
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.733),
+    0px 0px 80px 1px #6791ed inset;
+  background: linear-gradient(
+    90deg,
+    rgba(204, 211, 255, 0.527),
+    rgba(227, 255, 215, 0.644)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.vision {
+font-family: 'Lato', sans-serif;;
+  font-size: 23px;
+  padding: 2rem;
+  transition: 0.5s;
+  font-weight: bold;
+  text-align: center;
+}
+
+.visionDiv {
+  padding: 2rem;
+}
+
+.bannerNamePic {
+  width: 18rem;
+  margin-top: 2rem;
+  transition: 0.5s;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 1024px) {
+  .innerBanner {
+    width: 80%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .bannerNamePic {
+    width: 60%;
+    margin-top: 1rem;
+  }
+
+  .vision {
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .innerBanner {
+    width: 80%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .bannerNamePic {
+    width: 80%;
+    margin-top: 0.5rem;
+  }
+
+  .vision {
+    font-size: 18px;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,41 @@
+/* Define scrollbar styles */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #353535; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #a1cddf, #292863); /* Gradient for shooting star effect */
+    border-radius: 10px;
+    border: 2px solid transparent; /* Transparent border */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #55676e, #a1cddf); /* Gradient on hover */
+    border-color: #a1cddf; /* Border color on hover */
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+    /* Adjust scrollbar width and height for tablets */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* Media query for phones */
+@media only screen and (max-width: 480px) {
+    /* Adjust scrollbar width and height for phones */
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+}

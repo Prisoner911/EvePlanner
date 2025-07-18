@@ -1,0 +1,280 @@
+/* body {
+    background: linear-gradient(
+        90deg,
+        rgb(205, 245, 245),
+        rgb(159, 193, 255),
+        rgb(250, 216, 214)
+    );
+} */
+.raterDiv {
+    margin-top: 0px;
+    padding-top: 50px;
+    /* box-shadow: 0px 1px 15px 2px rgb(0, 0, 0) inset; */
+    padding-bottom: 5rem;
+    padding: 5rem;
+    background: linear-gradient(
+        90deg,
+        rgb(205, 245, 245),
+        rgb(159, 193, 255),
+        rgb(250, 216, 214)
+    );
+}
+
+.containerDivRate {
+    display: flex;
+    justify-content: center;
+}
+
+.stars {
+    font-size: 1.5rem;
+}
+
+#column1 {
+    transition: 0.2s;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#column1:hover {
+    transform: translateX(-1%);
+    transition: 0.2s;
+}
+
+.slideRateLeft {
+    animation: slideLeft 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#column2 {
+    transform: scale(0);
+}
+
+.appearRate {
+    animation: appearRate 1s forwards;
+    animation-delay: 0.8s;
+}
+@keyframes appearRate {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#column3 {
+    transition: 0.2s;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#column3:hover {
+    transition: 0.2s;
+}
+
+.slideRateRight {
+    animation: slideRight 1s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.raterHead {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-family: "Allura", cursive;
+    font-weight: bold;
+    font-size: 4.3vw;
+}
+.ratingsDiv {
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    gap: 1rem;
+    background-color: transparent;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.rowRate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.ratings {
+    border: 1px solid #ccc;
+    padding: 20px 0px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.637);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.divBody {
+    text-align: center;
+}
+
+.divBody .ratings {
+    margin-bottom: 10px;
+}
+
+.divBody .ratings span {
+    font-size: 28px;
+}
+
+.divBody p {
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .ratingsDiv {
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        gap: 1rem;
+        background-color: transparent;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        border-radius: 10px;
+    }
+
+    #column1 {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    #column2 {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    #column3 {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .raterHead {
+        font-size: 9vw;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header p {
+        margin: 5px 0;
+        font-size: 32px;
+    }
+
+    .divBody {
+        text-align: center;
+    }
+
+    .divBody .ratings {
+        margin-bottom: 10px;
+    }
+
+    .divBody .ratings span {
+        font-size: 40px;
+    }
+
+    .divBody p {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .ratingsDiv {
+        display: grid;
+        /* grid-template-columns: 1fr; */
+        gap: 1rem;
+        background-color: transparent;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+        border-radius: 10px;
+    }
+
+    #column1 {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    #column2 {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    #column3 {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    .header .userName {
+        font-size: 1.3rem;
+    }
+    .header .dateP {
+        font-size: 1rem;
+    }
+
+    .raterHead {
+        font-size: 11vw;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .divBody {
+        text-align: center;
+    }
+
+    .divBody .ratings {
+        margin-bottom: 10px;
+    }
+
+    .divBody .ratings span {
+        font-size: 30px;
+    }
+
+    .divBody p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+}
