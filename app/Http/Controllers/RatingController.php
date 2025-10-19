@@ -6,6 +6,8 @@ use App\Models\customerDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Models\Ratings;
+use Twilio\Rest\Client;
+
 
 class RatingController extends Controller
 {
@@ -48,36 +50,36 @@ class RatingController extends Controller
     }
 
 
-    public function ratinglink($id)
-    {
-        $customers = customerDetails::where('ApplicationNo', $id)->first();
-        if (is_null($customers)) {
-            return redirect()->back()->with('error', 'Failed to send the rating link');
-        }
-        $customerPhone = $customers->PhoneNo;
-        $ratingLink = '/rateUs';
-        $message = "Dear customer, please rate our service by clicking on the following link:" . $ratingLink;
+    // public function ratinglink($id)
+    // {
+    //     $customers = customerDetails::where('ApplicationNo', $id)->first();
+    //     if (is_null($customers)) {
+    //         return redirect()->back()->with('error', 'Failed to send the rating link');
+    //     }
+    //     $customerPhone = $customers->PhoneNo;
+    //     $ratingLink = '/rateUs';
+    //     $message = "Dear customer, please rate our service by clicking on the following link:" . $ratingLink;
 
-        // try {
+    //     try {
 
-        //     $account_id = getenv("TWILIO_SID");
-        //     $auth_token = getenv("TWILIO_TOKEN");
-        //     $twilio_number = getenv("TWILIO_FROM");
+    //         $account_id = getenv("TWILIO_SID");
+    //         $auth_token = getenv("TWILIO_TOKEN");
+    //         $twilio_number = getenv("TWILIO_FROM");
 
 
-        //     $client = new Client($account_id, $auth_token);
+    //         $client = new Client($account_id, $auth_token);
 
-        //     $client->messages->create(
-        //         $managerPhone,
-        //         [
-        //             'from' => $twilio_number,
-        //             'body' => $message
-        //         ]
-        //     );
-        //     return redirect()->back()->with('message','Link sent successfully');
-        // } catch (\Exception $e) {
-        //     return redirect()->back()->with('error', 'Failed to send the rating link');
-        // }
+    //         $client->messages->create(
+    //             $managerPhone,
+    //             [
+    //                 'from' => $twilio_number,
+    //                 'body' => $message
+    //             ]
+    //         );
+    //         return redirect()->back()->with('message','Link sent successfully');
+    //     } catch (\Exception $e) {
+    //         return redirect()->back()->with('error', 'Failed to send the rating link');
+    //     }
 
-    }
+    // }
 }
